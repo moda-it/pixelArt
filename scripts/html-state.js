@@ -1,0 +1,12 @@
+export const htmlState = {
+  cellSizeInput: document.getElementById("cell-size"),
+  applyGrid: document.getElementById("apply-button"),
+  gridWidthInput: document.getElementById("grid-width"),
+  gridHeightInput: document.getElementById("grid-height"),
+  modeButton: document.getElementById("mode-button"),
+  colorPicker: document.getElementById("color-picker"),
+  canvas: document.getElementById("main-board"),
+  iconUse: document.getElementById("btn-icon"),
+  clearButton: document.getElementById("clear-button"),
+  ctx: document.getElementById("main-board").getContext("2d"),
+};

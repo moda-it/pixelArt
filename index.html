@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>PixelArt</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <header class="header">
+    <img src="#" alt="#" class="logo" />
+    <h1>PixelArt</h1>
+    <div class="contact"></div>
+  </header>
+  <body>
+    <section class="main-draw" id="draw-section">
+      <canvas class="board" id="main-board"></canvas>
+      <div class="control-panel">
+        <button id="clear-button">Clear</button>
+        <button class="mode-button" id="mode-button">
+          <svg class="icon">
+            <use
+              id="btn-icon"
+              xlink:href="./style/symbol-defs.svg#icon-pencil"
+            ></use>
+          </svg>
+          <span>Mode</span>
+        </button>
+        <div class="grid">
+          <input type="color" id="color-picker" />
+          <label for="color-picker">Choose Color:</label>
+          <input id="cell-size" min="2" />
+          <label for="cell-size">Cell Size</label>
+          <input type="number" id="grid-width" min="1" />
+          <label for="grid-width">Grid Width</label>
+          <input type="number" id="grid-height" min="1" />
+          <label for="grid-height">Grid Height</label>
+          <button id="apply-button">Apply</button>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="scripts/code.js"></script>
+  </body>
+</html>
