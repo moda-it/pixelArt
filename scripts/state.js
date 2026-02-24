@@ -6,3 +6,8 @@ export const state = {
   mode: modes.draw,
   selectedColor: "#000000",
 };
+
+export const loopState = {
+  i: 0,
+  maxItems: 14,
+};

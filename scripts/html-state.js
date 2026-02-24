@@ -9,4 +9,6 @@ export const htmlState = {
   iconUse: document.getElementById("btn-icon"),
   clearButton: document.getElementById("clear-button"),
   ctx: document.getElementById("main-board").getContext("2d"),
+  prewContainer: document.getElementById("prewContainer"),
+  buttonSC: document.getElementById("saveColor"),
 };

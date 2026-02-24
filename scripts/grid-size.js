@@ -1,21 +1,19 @@
 import { state } from "./state.js";
 import { htmlState } from "./html-state.js";
 
-export function validateGridWidth(value) {
-  state.gridWidth = +value;
-  if (state.gridWidth < 1) {
-    state.gridWidth = 1;
-    htmlState.gridWidthInput.value = 1;
-  }
-  htmlState.canvas.width = state.gridWidth * state.cellSize;
-  drawGridLine();
-}
-
-export function validateGridHeight(value) {
-  state.gridHeight = +value;
-  if (state.gridHeight < 1) {
-    state.gridHeight = 1;
-    htmlState.gridHeightInput.value = 1;
+export function validateGrid(value, isWidth, isHeight) {
+  if (isWidth) {
+    state.gridWidth = +value;
+    if (state.gridWidth < 1) {
+      state.gridWidth = 1;
+      htmlState.gridWidthInput.value = 1;
+    }
+  } else if (isHeight) {
+    state.gridHeight = +value;
+    if (state.gridHeight < 1) {
+      state.gridHeight = 1;
+      htmlState.gridHeightInput.value = 1;
+    }
   }
   htmlState.canvas.height = state.gridHeight * state.cellSize;
   drawGridLine();
