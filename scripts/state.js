@@ -5,6 +5,8 @@ export const state = {
   gridHeight: 32,
   mode: modes.draw,
   selectedColor: "#000000",
+  lastRow: null,
+  lastCol: null,
 };
 
 export const loopState = {
