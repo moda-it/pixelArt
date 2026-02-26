@@ -55,6 +55,11 @@ htmlState.applyGrid.addEventListener("click", () => {
   func.validateGrid(htmlState.gridHeightInput.value, false, true);
 });
 
+htmlState.buttonOG.addEventListener("click", () => {
+  htmlState.gridSettingsPanel.style.display =
+    htmlState.gridSettingsPanel.style.display === "flex" ? "none" : "flex";
+});
+
 htmlState.colorPicker.addEventListener("input", (event) => {
   state.selectedColor = event.target.value;
 });
@@ -76,30 +81,25 @@ htmlState.clearButton.addEventListener("click", () => {
   func.drawGridLine();
 });
 
-// htmlState.canvas.addEventListener("mousemove", (event) => {
-//   if (event.buttons !== 1) return;
-
-//   const x = Math.floor(event.offsetX / state.cellSize) * state.cellSize;
-//   const y = Math.floor(event.offsetY / state.cellSize) * state.cellSize;
-//   let row = x / state.cellSize;
-//   let col = y / state.cellSize;
-//   const eraseColor = (row + col) % 2 === 0 ? "#cecece" : "white";
-//   htmlState.ctx.fillStyle =
-//     state.mode === "erase" ? eraseColor : state.selectedColor;
-//   htmlState.ctx.fillRect(x, y, state.cellSize, state.cellSize);
-// });
-
 // 2. Допоміжна функція малювання (теж поза обробником)
 function paintCell(col, row) {
-  const x = col * state.cellSize;
-  const y = row * state.cellSize;
+  // Малюємо 2x2 клітинки
+  for (let dc = 0; dc < htmlState.penSIzeInput.value; dc++) {
+    for (let dr = 0; dr < htmlState.penSIzeInput.value; dr++) {
+      const currentCol = col + dc;
+      const currentRow = row + dr;
+      const x = currentCol * state.cellSize;
+      const y = currentRow * state.cellSize;
 
-  // Ваша логіка шахматки для гумки
-  const eraseColor = (row + col) % 2 === 0 ? "#cecece" : "white";
+      // Ваша логіка шахматки для гумки
+      const eraseColor =
+        (currentRow + currentCol) % 2 === 0 ? "#cecece" : "white";
 
-  htmlState.ctx.fillStyle =
-    state.mode === "erase" ? eraseColor : state.selectedColor;
-  htmlState.ctx.fillRect(x, y, state.cellSize, state.cellSize);
+      htmlState.ctx.fillStyle =
+        state.mode === "erase" ? eraseColor : state.selectedColor;
+      htmlState.ctx.fillRect(x, y, state.cellSize, state.cellSize);
+    }
+  }
 }
 
 // 3. Алгоритм Брезенгема

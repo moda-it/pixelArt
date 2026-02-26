@@ -11,4 +11,7 @@ export const htmlState = {
   ctx: document.getElementById("main-board").getContext("2d"),
   prewContainer: document.getElementById("prewContainer"),
   buttonSC: document.getElementById("saveColor"),
+  buttonOG: document.getElementById("open-grid-settings"),
+  gridSettingsPanel: document.getElementById("gridSettings"),
+  penSIzeInput: document.getElementById("pen-size"),
 };

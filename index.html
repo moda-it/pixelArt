@@ -21,28 +21,42 @@
     <section class="main-draw" id="draw-section">
       <canvas class="board" id="main-board"></canvas>
       <div class="control-panel">
-        <button id="clear-button">Clear</button>
-        <button class="mode-button" id="mode-button">
-          <svg class="icon">
-            <use
-              id="btn-icon"
-              xlink:href="./style/symbol-defs.svg#icon-pencil"
-            ></use>
-          </svg>
-          <span>Mode</span>
-        </button>
+        <div class="pen-settings" id="penSettings">
+          <button id="clear-button">Clear</button>
+          <button class="mode-button" id="mode-button">
+            <svg class="icon">
+              <use
+                id="btn-icon"
+                xlink:href="./style/symbol-defs.svg#icon-pencil"
+              ></use>
+            </svg>
+            <span>Mode</span>
+          </button>
+          <input type="number" id="pen-size" min="1" value="1" /><label
+            for="pen-size"
+            >Pen Size</label
+          >
+          <div class="pens" id="pens">
+            <span>1</span><span>2</span><span>3</span>
+          </div>
+        </div>
         <div class="grid">
           <input type="color" id="color-picker" />
           <label for="color-picker">Choose Color:</label>
           <div class="prew-color" id="prewContainer"></div>
           <button id="saveColor">Add</button>
-          <input id="cell-size" min="2" />
-          <label for="cell-size">Cell Size</label>
-          <input type="number" id="grid-width" min="1" />
-          <label for="grid-width">Grid Width</label>
-          <input type="number" id="grid-height" min="1" />
-          <label for="grid-height">Grid Height</label>
-          <button id="apply-button">Apply</button>
+          <div class="grid-container">
+            <div class="grid-settings" id="gridSettings">
+              <input id="cell-size" min="2" />
+              <label for="cell-size">Cell Size</label>
+              <input type="number" id="grid-width" min="1" />
+              <label for="grid-width">Grid Width</label>
+              <input type="number" id="grid-height" min="1" />
+              <label for="grid-height">Grid Height</label>
+              <button id="apply-button">Apply</button>
+            </div>
+            <button id="open-grid-settings">open</button>
+          </div>
         </div>
       </div>
     </section>
