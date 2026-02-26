@@ -8,14 +8,15 @@ export function validateGrid(value, isWidth, isHeight) {
       state.gridWidth = 1;
       htmlState.gridWidthInput.value = 1;
     }
+    htmlState.canvas.width = state.gridWidth * state.cellSize;
   } else if (isHeight) {
     state.gridHeight = +value;
     if (state.gridHeight < 1) {
       state.gridHeight = 1;
       htmlState.gridHeightInput.value = 1;
     }
+    htmlState.canvas.height = state.gridHeight * state.cellSize;
   }
-  htmlState.canvas.height = state.gridHeight * state.cellSize;
   drawGridLine();
 }
 
