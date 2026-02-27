@@ -83,7 +83,6 @@ htmlState.clearButton.addEventListener("click", () => {
 
 // 2. Допоміжна функція малювання (теж поза обробником)
 function paintCell(col, row) {
-  // Малюємо 2x2 клітинки
   for (let dc = 0; dc < htmlState.penSIzeInput.value; dc++) {
     for (let dr = 0; dr < htmlState.penSIzeInput.value; dr++) {
       const currentCol = col + dc;

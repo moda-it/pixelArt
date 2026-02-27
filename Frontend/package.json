@@ -7,7 +7,7 @@
   "type": "commonjs",
   "main": "./scripts/main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron . --ozone-platform=x11"
   },
   "devDependencies": {
     "electron": "^40.1.0"
