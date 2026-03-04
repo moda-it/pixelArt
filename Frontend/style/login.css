@@ -51,3 +51,21 @@ button:hover {
   cursor: pointer;
   text-decoration: underline;
 }
+
+.forg-pass:hover {
+  color: #21a1f1;
+}
+
+.container {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-login {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+}

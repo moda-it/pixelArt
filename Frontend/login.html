@@ -13,18 +13,36 @@
     <link rel="stylesheet" href="./style/login.css" />
   </head>
   <body>
-    <div class="login-container">
-      <h2>Вхід до PixelArt</h2>
-      <input type="text" class="input" id="usernameInput" placeholder="Логін" />
-      <input
-        type="password"
-        class="input"
-        id="passwordInput"
-        placeholder="Пароль"
-      />
-      <label for="passwordInput" class="forg-pass">Забули пароль?</label>
-      <button id="loginButton">Увійти</button>
-    </div>
+    <section class="container">
+      <div class="login-container">
+        <h2>Вхід до PixelArt</h2>
+        <input
+          type="text"
+          class="input"
+          id="usernameInput"
+          placeholder="Логін"
+        />
+        <input
+          type="password"
+          class="input"
+          id="passwordInput"
+          placeholder="Пароль"
+        />
+        <label for="passwordInput" class="forg-pass">Забули пароль?</label>
+        <button id="loginButton">Увійти</button>
+      </div>
+      <div class="social-login">
+        <p>Або увійдіть за допомогою</p>
+        <div class="social">
+          <button id="facebookLogin" class="social-btn facebook-btn">
+            <span>Facebook</span>
+          </button>
+          <button id="gmailLogin" class="social-btn gmail-btn">
+            <span>Gmail</span>
+          </button>
+        </div>
+      </div>
+    </section>
     <script type="module" src="./scripts/login.js"></script>
   </body>
 </html>
