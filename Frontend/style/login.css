@@ -44,3 +44,10 @@ button {
 button:hover {
   background-color: #21a1f1;
 }
+
+.forg-pass {
+  font-size: small;
+  color: #333;
+  cursor: pointer;
+  text-decoration: underline;
+}
